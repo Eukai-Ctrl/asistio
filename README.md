@@ -1,20 +1,12 @@
-# Asistio v0.3 Online
+# Asistio v0.4 Full
 
-Piloto online conectado a Supabase.
+1. Mantén tu config.js actual con Project URL + Publishable Key.
+2. Ejecuta SUPABASE_V04.sql una sola vez en Supabase SQL Editor.
+3. Crea/deploya la Edge Function `create-user` usando `supabase/functions/create-user/index.ts`.
+4. Sube index.html, manifest, service-worker, icons y config.js a GitHub Pages.
+5. Prueba login, colegios, usuarios, cursos, asignaturas, alumnos, QR, asistencia e historial.
 
-## Antes de publicar
-1. Abrir `config.js`.
-2. Reemplazar `PEGA_AQUI_PROJECT_URL` por Project URL de Supabase.
-3. Reemplazar `PEGA_AQUI_PUBLISHABLE_KEY` por Publishable key.
-4. No usar service_role, secret key ni contraseña de PostgreSQL.
-5. Subir TODO el contenido de esta carpeta a la raíz del repositorio `asistio`.
-
-## Piloto incluido
-- Login Supabase Auth.
-- Detección de rol y membresía.
-- Dashboard.
-- CRUD de colegios para Superadmin.
-- Selección de colegio.
-- CRUD básico de alumnos online.
-- Cierre de sesión.
-- PWA.
+IMPORTANTE:
+- Nunca publiques service_role ni contraseña PostgreSQL.
+- La Edge Function usa los secretos internos de Supabase.
+- Para cerrar asistencia con ausentes, primero deben existir matrículas en enrollments.
