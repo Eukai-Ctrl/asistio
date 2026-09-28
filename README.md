@@ -1,12 +1,19 @@
-# Asistio v0.4 Full
+# Asistio v0.4.1 Ready
 
-1. Mantén tu config.js actual con Project URL + Publishable Key.
-2. Ejecuta SUPABASE_V04.sql una sola vez en Supabase SQL Editor.
-3. Crea/deploya la Edge Function `create-user` usando `supabase/functions/create-user/index.ts`.
-4. Sube index.html, manifest, service-worker, icons y config.js a GitHub Pages.
-5. Prueba login, colegios, usuarios, cursos, asignaturas, alumnos, QR, asistencia e historial.
+Corrección del login de v0.4:
+- formulario de login explícito
+- manejo visible de errores
+- estado "Ingresando..."
+- referencias DOM robustas
+- caché PWA renovada
 
-IMPORTANTE:
-- Nunca publiques service_role ni contraseña PostgreSQL.
-- La Edge Function usa los secretos internos de Supabase.
-- Para cerrar asistencia con ausentes, primero deben existir matrículas en enrollments.
+DESPLIEGUE:
+1. NO reemplaces tu config.js funcional.
+2. Sube index.html, service-worker.js, manifest.webmanifest, .nojekyll y README.md.
+3. Mantén icons/.
+4. Commit: Asistio v0.4.1 Ready
+5. Espera GitHub Pages y abre con Ctrl+F5 o incógnito.
+
+Backend:
+- Mantén el SQL v0.4 ya aplicado.
+- Mantén la Edge Function create-user ya desplegada.
